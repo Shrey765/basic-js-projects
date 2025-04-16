@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Art</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-wrap">
+        <img src="images 2/back.png" id="backBtn">
+        <div class="gallery">
+            <div>
+                <span><img src="images 2/image-1.png" alt=""></span>
+                <span><img src="images 2/image-2.png" alt=""></span>
+                <span><img src="images 2/image-3.png" alt=""></span>
+            </div>
+            <div>
+                <span><img src="images 2/image-4.png" alt=""></span>
+                <span><img src="images 2/image-5.png" alt=""></span>
+                <span><img src="images 2/image-6.png" alt=""></span>
+            </div>
+        </div>
+        <img src="images 2/next.png" id="nextBtn">
+    </div>
+
+    <script>
+
+        let scrollContainer = document.querySelector('.gallery');
+        let backBtn = document.getElementById('backBtn');
+        let nextBtn = document.getElementById('nextBtn');
+
+        nextBtn.addEventListener('click', (e) => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft += 900;
+        })
+
+        backBtn.addEventListener('click', (e) => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft -= 900;
+        })
+
+    </script>
+</body>
+</html>
